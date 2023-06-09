@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+import LogoImage from "../assets/logo.png";
+import ExpandIcon from "../assets/align-right.svg";
+---
+
+<div class="bg-primary absolute w-screen z-10">
+  <nav
+    class="container flex flex-col items-start justify-between px-14 py-5 text-white md:flex-row md:items-center"
+  >
+    <span class="flex w-full flex-row justify-between md:w-auto">
+      <Image src={LogoImage} alt="Logo" width="160" />
+      <img
+        id="expand-icon"
+        src={ExpandIcon.src}
+        alt="Expand"
+        width="24"
+        class="ml-4 md:hidden"
+      />
+    </span>
+    <span id="menu" class="hidden flex-col md:flex-row pt-4 md:pt-0 md:flex">
+      <span class="cursor-pointer px-3 text-sm py-4"><a href="/">Home</a></span>
+      <span class="cursor-pointer px-3 text-sm py-4"
+        ><a href="/about">About</a></span
+      >
+      <span class="cursor-pointer px-3 text-sm py-4"
+        ><a href="/gallery">Gallery</a></span
+      >
+      <span class="cursor-pointer px-3 text-sm py-4"
+        ><a href="/contact">Contact</a></span
+      >
+    </span>
+  </nav>
+</div>
+
+<script>
+  const expandBtn = document.getElementById("expand-icon");
+  expandBtn?.addEventListener("click", showMenu);
+
+  function showMenu() {
+    const menu = document.getElementById("menu");
+    if (!menu) {
+      console.warn("Menu not found");
+      return;
+    }
+
+    menu.classList.toggle("hidden");
+    menu.classList.toggle("flex");
+  }
+</script>
