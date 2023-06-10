@@ -1,0 +1,73 @@
+---
+import { getImage } from "astro:assets";
+import CountdownCard from "./components/CountdownCard.astro";
+import BackgroundImage from "../../assets/bg-img.png";
+
+const optimizedImage = await getImage({
+  src: BackgroundImage,
+  formats: ["avif", "webp", "jpeg"],
+});
+---
+
+<div
+  class="h-96 bg-cover bg-center bg-no-repeat relative"
+  style={`background-image: url(${optimizedImage.src})`}
+>
+  <!-- black mask -->
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+  <!-- content -->
+  <div class="absolute inset-0 flex flex-col justify-center items-center">
+    <h1 class="text-2xl text-white font-">Hurry up! Time is running</h1>
+    <!-- counter -->
+    <div class="flex flex-row justify-center items-center mt-4">
+      <CountdownCard title="Days" />
+      <CountdownCard title="Hours" />
+      <CountdownCard title="Minutes" />
+      <CountdownCard title="Seconds" />
+    </div>
+  </div>
+</div>
+
+<script>
+  const days = document.getElementById("days");
+  const hours = document.getElementById("hours");
+  const minutes = document.getElementById("minutes");
+  const seconds = document.getElementById("seconds");
+
+  if (!days || !hours || !minutes || !seconds) {
+    throw new Error("Missing element");
+  }
+
+  // deadline is 2023-07-06 00:00:00
+  const deadline = new Date("July 6, 2023 00:00:00").getTime();
+
+  const x = setInterval(() => {
+    const now = new Date().getTime();
+    const t = deadline - now;
+
+    const d = Math.floor(t / (1000 * 60 * 60 * 24));
+    const h = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((t % (1000 * 60)) / 1000);
+
+    // if its less than 10, add a 0 in front
+    const day = d < 10 ? `0${d}` : `${d}`;
+    const hour = h < 10 ? `0${h}` : `${h}`;
+    const minute = m < 10 ? `0${m}` : `${m}`;
+    const second = s < 10 ? `0${s}` : `${s}`;
+
+    days.innerHTML = day;
+    hours.innerHTML = hour;
+    minutes.innerHTML = minute;
+    seconds.innerHTML = second;
+
+    if (t < 0) {
+      clearInterval(x);
+      days.innerHTML = "00";
+      hours.innerHTML = "00";
+      minutes.innerHTML = "00";
+      seconds.innerHTML = "00";
+    }
+  }, 1000);
+</script>
