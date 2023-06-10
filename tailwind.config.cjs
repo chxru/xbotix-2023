@@ -14,6 +14,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#18181c",
+        secondary: "#f50136",
       },
       fontFamily: {
         sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
