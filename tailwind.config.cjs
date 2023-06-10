@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         primary: "#18181c",
         secondary: "#f50136",
+        subtitle: "#838383"
       },
       fontFamily: {
         sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
