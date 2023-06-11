@@ -17,6 +17,7 @@ module.exports = {
         secondary: "#f50136",
         subtitle: "#838383",
         tertiary: "#f44336",
+        ash: "#f0f2f6"
       },
       fontFamily: {
         sans: ["Montserrat", ...defaultTheme.fontFamily.sans],

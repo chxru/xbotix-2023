@@ -1,0 +1,24 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<h1 class="title text-4xl py-2 relative font-bold uppercase">{title}</h1>
+
+<style>
+  .title {
+    color: #18181c6;
+    padding: 10px 0;
+  }
+  .title::before {
+    width: 30px;
+    content: " ";
+    position: absolute;
+    border-top: solid 3px #f50136;
+    left: 0;
+    top: 0;
+  }
+</style>

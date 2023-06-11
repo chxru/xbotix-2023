@@ -1,0 +1,55 @@
+---
+import Title from "../Title.astro";
+import XbotixCard from "./components/XbotixCard.astro";
+import BroadcastIcon from "../../assets/globe.svg";
+import DeadlineIcon from "../../assets/check-circle.svg";
+import GalleryIcon from "../../assets/archive.svg";
+import JudgeIcon from "../../assets/user-check.svg";
+---
+
+<div class="md:container px-12 py-24">
+  <Title title="Xbotix 2023" />
+
+  <div class="w-full flex flex-col lg:flex-row mt-8">
+    <div class="w-full pr-4 text-subtitle">
+      Xbotix, the most awaited robotic extravaganza in down south unfolds its
+      7th national consecutive chapter in winter 2023. It is one of the leading
+      robotics competitions in Sri Lanka to both undergraduates and school
+      competitors of Sri Lanka
+    </div>
+
+    <hr class="my-4 block lg:hidden" />
+
+    <div class="w-full pr-4 text-subtitle">
+      Hosting 125+ undergraduate category competitors and 250+ school category
+      competitors. This is the best platform to young roboticist to show their
+      talents and pull off the battle with enticing cash prizes.
+    </div>
+  </div>
+
+  <div class="flex flex-row flex-grow flex-wrap mt-16">
+    <XbotixCard
+      title="Deadline"
+      text="The registration will be closed on 23rd June at 11.59 P.M."
+      icon={DeadlineIcon}
+    />
+
+    <XbotixCard
+      title="Judge Panel"
+      text="The Judges decision is final and no correspondence will be entered into "
+      icon={JudgeIcon}
+    />
+
+    <XbotixCard
+      title="Live Broadcast"
+      text="All the actions live on Facebook via REF Media Broadcasting unit"
+      icon={BroadcastIcon}
+    />
+
+    <XbotixCard
+      title="Memories"
+      text="Did you participate previous Xbotix? You can grab old memories from our gallery....! "
+      icon={GalleryIcon}
+    />
+  </div>
+</div>
