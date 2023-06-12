@@ -2,11 +2,13 @@
 
 import XbotixCard from "./components/XbotixCard.astro";
 import BroadcastIcon from "../../assets/globe.svg";
-import DeadlineIcon from "../../assets/check-circle.svg";
-import GalleryIcon from "../../assets/archive.svg";
-import JudgeIcon from "../../assets/user-check.svg";
+import Link from "../../assets/link.svg";
+import Fb from "../../assets/fb.svg";
+import Twit from "../../assets/twitter.svg";
 import ticketImage from '../../assets/footerlogo.png';
 import '../../styles/footer.css'
+
+
 
 
 ---
@@ -14,7 +16,7 @@ import '../../styles/footer.css'
 
 <div>
     <footer>
-        <div class="md:container">
+        <div class="new-cont">
             <div class=" flex flex-col lg:flex-row mt-8">
 
                 <div class="w-ful pr-4  text-subtitle">
@@ -33,6 +35,7 @@ import '../../styles/footer.css'
                             </p>
                             <ul class="footer_social">
                                 <li>
+                                    
                                     <a href="#"><i class="ion-social-pinterest"></i></a>
                                 </li>
                                 <li>
@@ -51,36 +54,20 @@ import '../../styles/footer.css'
                         </div>
                     </div>
                 </div>
-
-                <div class="w-ful pr-4  text-subtitle ">
-                    <div class="footer_box">
-                        <div class="footer_header">
-                            <h4 class="footer_title">
-                                Follow us on Facebook
-                            </h4>
-                        </div>
-                        <div class="footer_box_body">
-                            <iframe
-                                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FXbotiX%2F&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                                width="340" height="214" style="border:none;overflow:hidden" scrolling="no"
-                                frameborder="0" allow="encrypted-media"></iframe>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="w-ful pr-4  text-subtitle ">
-                    <div class="footer_box">
+                <div class="text-subtitle ">
+                    <div class="footer_box footer_box-1">
                         <div class="footer_header">
                             <h4 class="footer_title">
                                 Contact us
                             </h4>
+
                             <i class="icon-phone"> </i>&nbsp Amoda - 070 438 2929 <br />
                             <i class="icon-phone"> </i>&nbsp Viraj - 070 267 5393
                             <br />
                             <i class="icon-phone"> </i>&nbsp Eranda - 077 991 4732
                         </div>
                         <div class="footer_box_body">
-                            <h4 class="footer_title">
+                            <h4 class="footer_title ">
                                 Email:
                             </h4>
                             <form action="mailto:eiesruhuna@gmail.com" method="post" enctype="text/plain">
