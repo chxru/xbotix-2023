@@ -1,0 +1,89 @@
+---
+import Title from "../Title.astro";
+import XbotixCard from "./components/XbotixCard.astro";
+import BroadcastIcon from "../../assets/globe.svg";
+import DeadlineIcon from "../../assets/check-circle.svg";
+import GalleryIcon from "../../assets/archive.svg";
+import JudgeIcon from "../../assets/user-check.svg";
+import '../../styles/event.css'
+---
+
+<div class=" px-12 py-8">
+    <div class="table-responsive w-full lg:flex-row mt-8">
+        <table class="event_calender table w-full pr-4" >
+            <thead class="event_title">
+                <tr>
+                    <th>
+                        <i class="ion-ios-calendar-outline"></i>
+                        <span>next events calendar</span>
+                    </th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--                <tr>-->
+                <!--                    <td>-->
+                <!--                        <img src="assets/img/cleander/c1.png" alt="Xbotix">-->
+                <!--                    </td>-->
+                <!--                    <td class="event_date">-->
+                <!--                        XX-->
+                <!--                        <span>December</span>-->
+                <!--                    </td>-->
+                <!--                    <td>-->
+                <!--                        <div class="event_place">-->
+                <!--                            <h5>Testing</h5>-->
+                <!--                            <h6>08 AM - 04 PM</h6>-->
+                <!--                            <p>Faculty Aditorium</p>-->
+                <!--                        </div>-->
+                <!--                    </td>-->
+                <!--					<td>-->
+                <!--					-->
+                <!--					</td>-->
+                <!--                </tr>-->
+                <tr>
+                    <td>
+                        <img src="assets/img/cleander/c2.png" alt="Xbotix">
+                    </td>
+                    <td class="event_date">
+                        06
+                        <span>July</span>
+                    </td>
+                    <td>
+                        <div class="event_place">
+                            <h5>Undergratuate Category Competition</h5>
+                            <h6>08 AM -onwards</h6>
+                            <p>Drawing Office 1</p>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="assets/pdf/xbotix_2023_UG.pdf" class="btn btn-primary btn-rounded">Task</a>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <img src="assets/img/cleander/c3.png" alt="Xbotix">
+                    </td>
+                    <td class="event_date">
+                        06
+                        <span>July</span>
+                    </td>
+                    <td>
+                        <div class="event_place">
+                            <h5>School Category Competition</h5>
+                            <h6>08 AM - 04 PM</h6>
+                            <p>Drawing Office 2</p>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="assets/pdf/xbotix_2023_school.pdf" class="btn btn-primary btn-rounded">Task</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  
+</div>
