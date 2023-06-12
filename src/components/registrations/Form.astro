@@ -2,6 +2,8 @@
 import Title from "../Title.astro";
 import { getImage } from "astro:assets";
 
+
+import react from "react"
 import '../../styles/contact.css'
 
 ;
@@ -22,7 +24,7 @@ import '../../styles/contact.css'
           <img id="xbotix-img" src="assets/img/logo-dark.png" alt="evento" />
           <div class="flex flex-row lg:flex-row  mt-8 mt-10 contact_form">
             <div class="">
-              <form action="" method="post" enctype="text/plain">
+              <form name="contact" method="POST" data-netlify="true">
         
                 <div class="form-group">
                     <label for="">Name of the University</label>
