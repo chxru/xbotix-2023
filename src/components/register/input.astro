@@ -1,0 +1,35 @@
+---
+interface Props {
+  id: string;
+  label: string;
+  type: "text" | "email" | "tel";
+  error?: string;
+  required?: boolean;
+}
+
+const props = Astro.props;
+---
+
+<div class="mb-4">
+  <label
+    id={props.id + "-label"}
+    for={props.id}
+    class="mb-2 block text-sm font-medium text-gray-900"
+  >
+    {props.label}
+    {props.required && <span class="text-secondary">*</span>}
+  </label>
+  <input
+    type={props.type}
+    id={props.id}
+    name={props.id}
+    class="block w-full border border-gray-300 p-2.5 text-sm text-gray-900 transition-all focus:border-secondary"
+    required={props.required}
+  />
+
+  {
+    props.error && (
+      <p class="text-sm font-normal text-secondary">{props.error}</p>
+    )
+  }
+</div>

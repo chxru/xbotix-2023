@@ -1,0 +1,130 @@
+---
+import RadioButton from "./radio.astro";
+import TextInput from "./input.astro";
+---
+
+<div class="container mt-16 max-w-5xl">
+  <form id="register-form" data-netlify="true">
+    <h2 class="text-xl font-medium">Category</h2>
+
+    <RadioButton id="school" label="School Category" name="category" />
+    <RadioButton
+      id="undergraduate"
+      label="Undergraduate Category"
+      name="category"
+    />
+
+    <div id="hidden-form" class="hidden">
+      <hr class="my-4" />
+
+      <TextInput id="institute" label="Institute" type="text" required />
+
+      <h2 class="mb-4 mt-8 text-xl font-medium">Team Details</h2>
+
+      <TextInput id="team" label="Team Name" type="text" required />
+
+      <h2 class="mb-4 mt-8 text-xl font-medium">Leader Details</h2>
+
+      <TextInput id="leader.name" label="Name" type="text" required />
+      <TextInput id="leader.email" label="Email" type="email" required />
+      <TextInput id="leader.phone" label="Phone" type="tel" required />
+
+      <h2 class="mb-4 mt-8 text-xl font-medium">Member 1 Details</h2>
+
+      <TextInput id="member1.name" label="Name" type="text" />
+      <TextInput id="member1.email" label="Email" type="email" />
+      <TextInput id="member1.phone" label="Phone" type="tel" />
+
+      <h2 class="mb-4 mt-8 text-xl font-medium">Member 2 Details</h2>
+
+      <TextInput id="member2.name" label="Name" type="text" />
+      <TextInput id="member2.email" label="Email" type="email" />
+      <TextInput id="member2.phone" label="Phone" type="tel" />
+
+      <h2 class="mb-4 mt-8 text-xl font-medium">Member 3 Details</h2>
+
+      <TextInput id="member3.name" label="Name" type="text" />
+      <TextInput id="member3.email" label="Email" type="email" />
+      <TextInput id="member3.phone" label="Phone" type="tel" />
+
+      <button
+        class="px-10 py-3 rounded-full bg-secondary w-36 text-white"
+        id="form-submit-btn"
+        type="submit">Register</button
+      >
+    </div>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById("register-form") as HTMLFormElement;
+  const submitBtn = document.getElementById(
+    "form-submit-btn"
+  ) as HTMLButtonElement;
+  const radioBtns = document.querySelectorAll(
+    "input[name='category']"
+  ) as NodeListOf<HTMLInputElement>;
+  const schoolRadio = document.getElementById("school") as HTMLInputElement;
+  const undergraduateRadio = document.getElementById(
+    "undergraduate"
+  ) as HTMLInputElement;
+  const instituteLabel = document.getElementById(
+    "institute-label"
+  ) as HTMLLabelElement;
+
+  // event listener for category change
+  radioBtns.forEach((el) => {
+    el.addEventListener("change", () => {
+      if (schoolRadio.checked) {
+        instituteLabel.innerHTML =
+          "School Name" + ' <span class="text-secondary">*</span>';
+      }
+
+      if (undergraduateRadio.checked) {
+        instituteLabel.innerHTML =
+          "University Name" + ' <span class="text-secondary">*</span>';
+      }
+
+      // show rest of the form
+      const hiddenForm = document.getElementById("hidden-form");
+      if (hiddenForm) {
+        hiddenForm.classList.remove("hidden");
+      }
+    });
+  });
+
+  // handle form submit
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // run browser validation
+    if (!form.reportValidity()) {
+      e.stopPropagation();
+      return;
+    }
+
+    // get form data
+    const formData = new FormData(form);
+
+    // send to netlify
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      // @ts-ignore ain't dealing with this now 😮‍💨
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => {
+        // show success message
+        submitBtn.innerHTML = "Registered!";
+        submitBtn.classList.remove("bg-secondary");
+        submitBtn.classList.add("bg-green-500");
+      })
+      .catch((e) => {
+        console.error(e);
+        // show error message
+        submitBtn.innerHTML = "Error!";
+        submitBtn.classList.remove("bg-secondary");
+        submitBtn.classList.add("bg-red-500");
+      });
+  });
+</script>
