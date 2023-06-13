@@ -1,71 +1,45 @@
----
-import Calender2 from "../../assets/calender/c2.png";
-import { Image } from "astro:assets";
-import Calender3 from "../../assets/calender/c3.png";
-import "../../styles/event.css";
----
+<div class="flex flex-col max-w-2xl w-full mx-auto mb-8">
+  <div class="bg-secondary text-white pl-2 py-4">Upcoming events</div>
 
-<div class="px-12 py-8">
-  <div class="table-responsive mt-8 w-full overflow-x-auto lg:flex-row">
-    <table class="event_calender table w-full pr-4">
-      <thead class="event_title">
-        <tr>
-          <th>
-            <i class="ion-ios-calendar-outline"></i>
-            <span>next events calendar</span>
-          </th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <Image src={Calender2} alt="Logo" width="160" />
-          </td>
-          <td class="event_date">
-            06
-            <span>July</span>
-          </td>
-          <td>
-            <div class="event_place">
-              <h5>Undergratuate Category Competition</h5>
-              <h6>08 AM -onwards</h6>
-              <p>Drawing Office 1</p>
-            </div>
-          </td>
-          <td>
-            <a
-              href="assets/pdf/xbotix_2023_UG.pdf"
-              class="btn btn-primary btn-rounded">Task</a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Image src={Calender3} alt="Logo" width="160" />
-          </td>
-          <td class="event_date">
-            06
-            <span>July</span>
-          </td>
-          <td>
-            <div class="event_place">
-              <h5>School Category Competition</h5>
-              <h6>08 AM - 04 PM</h6>
-              <p>Drawing Office 2</p>
-            </div>
-          </td>
-          <td>
-            <a
-              href="assets/pdf/xbotix_2023_school.pdf"
-              class="btn btn-primary btn-rounded">Task</a
-            >
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <div
+    class="flex flex-col md:flex-row py-8 px-4 justify-between items-center my-2"
+  >
+    <div class="text-center">
+      <h2 class="font-medium text-3xl">06</h2>
+      <h3>July</h3>
+    </div>
+
+    <div class="text-center my-2">
+      <h2 class="font-medium text-xl">Undergraduate Category</h2>
+      <h3>8AM Onwards, Drawing Office 01</h3>
+    </div>
+
+    <a
+      href="assets/pdf/xbotix_2023_UG.pdf"
+      class="px-2 py-3 rounded-full bg-secondary w-20 text-white uppercase text-center text-sm my-2"
+    >
+      Task</a
+    >
+  </div>
+
+  <div
+    class="flex flex-col md:flex-row py-8 px-4 justify-between items-center my-2"
+  >
+    <div class="text-center">
+      <h2 class="font-medium text-3xl">06</h2>
+      <h3>July</h3>
+    </div>
+
+    <div class="text-center my-2">
+      <h2 class="font-medium text-xl">School Category</h2>
+      <h3>8AM Onwards, Drawing Office 02</h3>
+    </div>
+
+    <a
+      href="assets/pdf/xbotix_2023_school.pdf"
+      class="px-2 py-3 rounded-full bg-secondary w-20 text-white uppercase text-center text-sm my-2"
+    >
+      Task</a
+    >
   </div>
 </div>
