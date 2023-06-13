@@ -54,6 +54,11 @@ import TextInput from "./input.astro";
       >
     </div>
   </form>
+
+  <div id="success" class="hidden">
+    <h2 class="text-xl font-medium">Thank you for registering!</h2>
+    <p class="mt-4">We will get back to you soon with further details.</p>
+  </div>
 </div>
 
 <script>
@@ -71,6 +76,7 @@ import TextInput from "./input.astro";
   const instituteLabel = document.getElementById(
     "institute-label"
   ) as HTMLLabelElement;
+  const success = document.getElementById("success") as HTMLDivElement;
 
   // event listener for category change
   radioBtns.forEach((el) => {
@@ -118,6 +124,12 @@ import TextInput from "./input.astro";
         submitBtn.innerHTML = "Registered!";
         submitBtn.classList.remove("bg-secondary");
         submitBtn.classList.add("bg-green-500");
+
+        // hide form
+        form.classList.add("hidden");
+
+        // show success message
+        success.classList.remove("hidden");
       })
       .catch((e) => {
         console.error(e);
