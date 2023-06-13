@@ -1,0 +1,90 @@
+.price_box {
+    position: relative;
+    padding: 75px 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: #f0f2f6;
+    -webkit-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+  }
+  .price_box .price_highlight {
+    background-color: #f50136;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 15px;
+    color: #fff;
+  }
+  .price_box .price_header h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  .price_box .price_header h5 {
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #838383;
+    font-weight: 400;
+  }
+  .price_box .price_tag {
+    padding: 15px 0;
+    text-transform: capitalize;
+    color: #18181c;
+    font-size: 48px;
+    font-weight: 700;
+  }
+  .price_box .price_tag sup {
+    font-size: 24px;
+    font-weight: 400;
+    top: -15px;
+    left: -7px;
+    color: #838383;
+  }
+  .price_box .price_features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .price_box .price_features ul li {
+    padding: 7px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .price_box .price_footer {
+    margin-top: 30px;
+  }
+  .price_box:hover {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    -webkit-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+  }
+  
+  .price_box.active {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    -webkit-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+  }
+  
+
+  .gold{
+    color: #d4af37 ;
+    font-weight: bolder !important;
+    font-size: 30px !important;
+}
+.silver{
+    color: #aaa9ad;
+    font-weight: bold !important;
+    font-size: 25px !important;
+}
+.bronze{
+    color: #b08d57;
+    font-weight: normal !important;
+    font-size: 20px !important;
+}

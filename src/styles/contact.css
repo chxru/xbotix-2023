@@ -1,0 +1,134 @@
+.contact_box {
+    padding: 35px;
+    background-color: #ffffff;
+    border-radius: 4px;
+  }
+  .contact_form {
+    justify-content:   center ;
+  }
+  .flex-cont {
+    flex: 1;
+  }
+  .container-new {
+    max-width: 1460px;
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+  }
+  .form-control {
+    width: 500px;
+  }
+  .flex-container {
+    flex: 1 !important ;
+    justify-content: space-between !important;
+  }
+  .contact_box label {
+    color: #000;
+    font-size: 13px;
+    text-transform: capitalize;
+  }
+  .member {
+    display: flex ;
+    
+  }
+  .form-control-1 {
+    width: 200px;
+    font-size: 12px;
+    padding: 12px 15px;
+    margin: 0 20px 0 20px;
+    height: 50px;
+    border-radius: 1px;
+    background-color: #e2e6f1;
+    border: solid 1px #e2e6f1;
+    margin-bottom: 25px;
+    outline: 0 !important;
+    font-style: italic;
+    -webkit-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+  }
+  
+  .social_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .social_list li {
+    display: inline-block;
+    margin: 5px;
+  }
+  .social_list li a {
+    border: solid 1px #f50136;
+    display: block;
+    border-radius: 50px;
+    padding: 7px 0;
+    font-size: 24px;
+    color: #f50136;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+  }
+  .social_list li a:hover {
+    background-color: #f50136;
+    color: #ffffff;
+  }
+  
+  .map {
+    width: 100%;
+    min-height: 400px;
+  }
+  
+  .form-control {
+    font-size: 12px;
+    padding: 12px 15px;
+    height: 50px;
+    border-radius: 1px;
+    background-color: #e2e6f1;
+    border: solid 1px #e2e6f1;
+    margin-bottom: 25px;
+    outline: 0 !important;
+    font-style: italic;
+    -webkit-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+  }
+  .form-control:focus {
+    background-color: #ffffff;
+    border-color: #f50136;
+    -webkit-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+  }
+  
+  textarea.form-control {
+    min-height: 200px;
+    resize: vertical;
+  }
+
+  .icon_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .icon_list li {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    padding-left: 50px;
+    min-height: 50px;
+    margin-bottom: 7px;
+  }
+  .icon_list li i {
+    background-color: #f50136;
+    display: block;
+    border-radius: 50px;
+    padding: 7px 0;
+    font-size: 24px;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+  }
+  .icon_list li span {
+    color: #333333;
+    padding-top: 6px;
+    display: inline-block;
+  }

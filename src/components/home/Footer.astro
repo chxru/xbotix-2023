@@ -1,0 +1,95 @@
+---
+import "../../styles/footer.css";
+import { Image } from "astro:assets";
+import LogoImage from "../../assets/logo.png";
+---
+
+<div>
+  <footer>
+    <div class="new-cont">
+      <div class="mt-8 flex flex-col lg:flex-row">
+        <div class="w-full pr-4 text-subtitle">
+          <div class="footer_box">
+            <div class="footer_header">
+              <div class="footer_logo">
+                <Image src={LogoImage} alt="Logo" width="160" />
+              </div>
+            </div>
+            <div class="text-justify">
+              <p>
+                The biggest Robotic extravaganza of year 2023. Which is
+                organized by Electrical and Information Engineering Society
+                (EIES) in collaboration with IEEE Student Branch, IET Ruhuna
+                Chapter and Mechanical and Manufacturing Engineering Student
+                Society (MMESS) university of Ruhuna
+              </p>
+              <div class="pt-5">
+                <ul class="footer_social">
+                  <li>
+                    <a href="#"><i class="ion-social-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="ion-social-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="ion-social-dribbble"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="ion-social-instagram"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ml-8 md:ml-0 text-subtitle lg:ml-16">
+          <div class="footer_box footer_box-1">
+            <div class="footer_header">
+              <h4 class="footer_title">Contact us</h4>
+              <ul class="contact_list">
+                <li>
+                  <i class="icon-phone"></i> Amoda - 070 438 2929
+                </li>
+                <li>
+                  <i class="icon-phone"></i> Viraj - 070 267 5393
+                </li>
+                <li>
+                  <i class="icon-phone"></i> Eranda - 077 991 4732
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="copyright_footer">
+    <div class="container mx-auto">
+      <div class="flex flex-col items-center justify-between md:flex-row">
+        <div class="mb-4 text-center text-subtitle md:mb-0 md:text-left">
+          <p>
+            <a>
+              &copy; <span id="currentYear"></span> All rights reserved | Xbotix
+              2023
+            </a>
+          </p>
+        </div>
+        <ul class="flex justify-center text-sm text-subtitle md:justify-end">
+          <li class="mr-4">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="mr-4">
+            <a href="About.html">About</a>
+          </li>
+          <li class="mr-4">
+            <a href="Gallery.html">Gallery</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
