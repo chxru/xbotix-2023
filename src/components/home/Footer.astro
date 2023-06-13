@@ -1,116 +1,115 @@
 ---
-
-import XbotixCard from "./components/XbotixCard.astro";
-import BroadcastIcon from "../../assets/globe.svg";
-import Link from "../../assets/link.svg";
-import Fb from "../../assets/fb.svg";
-import Twit from "../../assets/twitter.svg";
-import ticketImage from '../../assets/footerlogo.png';
-import '../../styles/footer.css'
-
-
-
-
+import "../../styles/footer.css";
+import { Image } from "astro:assets";
+import LogoImage from "../../assets/logo.png";
 ---
 
-
 <div>
-    <footer>
-        <div class="new-cont">
-            <div class=" flex flex-col lg:flex-row mt-8">
-
-                <div class="w-ful pr-4  text-subtitle">
-                    <div class="footer_box">
-                        <div class="footer_header">
-                            <div class="footer_logo">
-                                <img src="assets/img/logo.png" alt="Xbotix">
-                            </div>
-                        </div>
-                        <div class="footer_box_body">
-                            <p>
-                                The biggest Robotic extravaganza of year 2023.Which is organized by Electrical and
-                                Information Engineering Society (EIES) in collaboration with IEEE Student Branch, IET
-                                Ruhuna Chapter and Mechanical and Manufacturing Engineering Student Society (MMESS)
-                                university of Ruhuna
-                            </p>
-                            <ul class="footer_social">
-                                <li>
-                                    
-                                    <a href="#"><i class="ion-social-pinterest"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="ion-social-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="ion-social-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="ion-social-dribbble"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="ion-social-instagram"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-subtitle ">
-                    <div class="footer_box footer_box-1">
-                        <div class="footer_header">
-                            <h4 class="footer_title">
-                                Contact us
-                            </h4>
-
-                            <i class="icon-phone"> </i>&nbsp Amoda - 070 438 2929 <br />
-                            <i class="icon-phone"> </i>&nbsp Viraj - 070 267 5393
-                            <br />
-                            <i class="icon-phone"> </i>&nbsp Eranda - 077 991 4732
-                        </div>
-                        <div class="footer_box_body">
-                            <h4 class="footer_title ">
-                                Email:
-                            </h4>
-                            <form action="mailto:eiesruhuna@gmail.com" method="post" enctype="text/plain">
-                                <div class="newsletter_form">
-                                    <input type="email" class="form-control" placeholder="E-Mail here">
-                                    <button type="submit" class="btn btn-rounded btn-block btn-primary">Send</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+  <footer>
+    <div class="new-cont">
+      <div class="mt-8 flex flex-col lg:flex-row">
+        <div class="w-full pr-4 text-subtitle">
+          <div class="footer_box">
+            <div class="footer_header">
+              <div class="footer_logo">
+                <Image src={LogoImage} alt="Logo" width="160" />
+              </div>
             </div>
-        </div>
-    </footer>
-    <div class="copyright_footer">
-        <div class="md:container">
-            <div class=" flex flex-col lg:flex-row mt-8">
-                <div class="w-ful pr-4 text-subtitle">
-                    <p>
-                        <a>Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> All rights reserved | Xbotix 2023
-                        </a>
-                    </p>
-                </div>
-                <div class="w-ful pr-4 text-subtitle ">
-                    <ul class="footer_menu">
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="About.html">About</a>
-                        </li>
-                        <li>
-                            <a href="Gallery.html">Gallery</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="text-justify">
+              <p>
+                The biggest Robotic extravaganza of year 2023. Which is
+                organized by Electrical and Information Engineering Society
+                (EIES) in collaboration with IEEE Student Branch, IET Ruhuna
+                Chapter and Mechanical and Manufacturing Engineering Student
+                Society (MMESS) university of Ruhuna
+              </p>
+              <div class="pt-5">
+                <ul class="footer_social">
+                  <li>
+                    <a href="#"><i class="ion-social-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="ion-social-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="ion-social-dribbble"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="ion-social-instagram"></i></a>
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
         </div>
+        <div class="ml-8 text-subtitle lg:ml-16">
+          <div class="footer_box footer_box-1">
+            <div class="footer_header">
+              <h4 class="footer_title">Contact us</h4>
+              <ul class="contact_list">
+                <li>
+                  <i class="icon-phone"></i> Amoda - 070 438 2929
+                </li>
+                <li>
+                  <i class="icon-phone"></i> Viraj - 070 267 5393
+                </li>
+                <li>
+                  <i class="icon-phone"></i> Eranda - 077 991 4732
+                </li>
+              </ul>
+            </div>
+            <div class="footer_box_body">
+              <h4 class="footer_title">Email:</h4>
+              <form
+                action="mailto:eiesruhuna@gmail.com"
+                method="post"
+                enctype="text/plain"
+              >
+                <div class="newsletter_form">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="E-Mail here"
+                  />
+                  <button
+                    type="submit"
+                    class="btn btn-rounded btn-block btn-primary">Send</button
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  
-</div>
+  </footer>
 
+  <div class="copyright_footer">
+    <div class="container mx-auto">
+      <div class="flex flex-col items-center justify-between md:flex-row">
+        <div class="mb-4 text-center text-subtitle md:mb-0 md:text-left">
+          <p>
+            <a>
+              &copy; <span id="currentYear"></span> All rights reserved | Xbotix
+              2023
+            </a>
+          </p>
+        </div>
+        <ul class="flex justify-center text-sm text-subtitle md:justify-end">
+          <li class="mr-4">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="mr-4">
+            <a href="About.html">About</a>
+          </li>
+          <li class="mr-4">
+            <a href="Gallery.html">Gallery</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
